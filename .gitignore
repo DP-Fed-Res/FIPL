@@ -1,0 +1,16 @@
+data/
+result/
+log/
+nohup*.out
+
+client_data/fl_*/
+
+__pycache__/
+*.pyc
+*.pyo
+
+.idea/
+.vscode/
+
+.DS_Store
+Thumbs.db

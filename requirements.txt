@@ -1,0 +1,15 @@
+torch>=1.13
+torchvision>=0.14
+
+opacus>=1.4
+
+numpy
+scipy
+scikit-learn
+pynndescent
+
+tqdm
+matplotlib
+Pillow
+
+setproctitle
