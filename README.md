@@ -1,13 +1,6 @@
 # FIPL-DA: Federated Implicit Prototype Learning with Domain-Aware Alignment
 
-A privacy-preserving federated learning algorithm targeting **domain skew**. FIPL-DA keeps class prototypes **implicit in the classifier weight matrix** (implicit prototype learning) and applies a **margin-penalized prototype separation regularization** on the server to push class pairs whose angle is too close apart, tending toward an equiangular (ETF) structure. This achieves global prototype alignment and separation without uploading or downloading explicit prototypes.
-
-## Core mechanism
-
-1. **Implicit prototype learning (client)**: row `k` of the classifier weight `W ∈ R^{K×D}` is the prototype of class `k`. Each client pulls the prototype row corresponding to the label toward the sample feature via `MSE(normalize(proto_emb(y)), stopgrad(f))`. Gradients flow only into `W`, so no explicit prototype upload is needed.
-2. **Prototype separation regularization (server)**: after directionally aggregating (spherical average) the uploaded `W`, a few GD steps solve `min_W ‖W − W̄‖² + λ·Σ_{i<j} max(0, W_i·W_j − m)²`, pushing apart only class pairs whose angle is too close (margin `m`) to prevent prototype collapse.
-
-Optional features: **differential privacy (DP-SGD)**, **simplex ETF classifier initialization**, per-round decay of server `etf_lr` / client `lambda_proto`.
+A privacy-preserving federated learning algorithm targeting **domain skew**. 
 
 ## Installation
 
