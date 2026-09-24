@@ -1,4 +1,4 @@
-# FIPL-DA: Federated Implicit Prototype Learning
+# FIPL: Federated Implicit Prototype Learning
 
 A privacy-preserving federated learning algorithm targeting **domain skew**. 
 
